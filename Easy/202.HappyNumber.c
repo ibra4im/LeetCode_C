@@ -9,12 +9,14 @@ int SquareNum(int n)
     }
     return squar;
 }
-bool isHappy(int n){
+bool isHappy(int n)
+{
 int slow = n , fast = n;
-do {
-    slow = (SquareNum(slow));
-    fast = (SquareNum(SquareNum(fast)));
-} while (slow != fast);
+    do 
+    {
+        slow = (SquareNum(slow));
+        fast = (SquareNum(SquareNum(fast)));
+    } while (slow != fast);
 
     if (slow == 1)
     return true;
